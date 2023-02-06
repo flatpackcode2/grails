@@ -1,0 +1,20 @@
+export enum ERROR_CODE{
+    INVALID_STEP_SIZE=1,
+    SNAKE_OUT_OF_BOUNDS,
+    INVALID_180_TURN,
+    FRUIT_NOT_FOUND,
+}
+
+export const ERROR_MESSAGE = {
+    [ERROR_CODE.INVALID_STEP_SIZE]: 'Invalid step size',
+    [ERROR_CODE.SNAKE_OUT_OF_BOUNDS]: 'Snake out of bounds',
+    [ERROR_CODE.INVALID_180_TURN]: 'Invalid 180 Degree turn',
+    [ERROR_CODE.FRUIT_NOT_FOUND]: 'Snake did not arrive at fruit'
+}
+
+export const ERROR_CODE_TO_HTTP_STATUS = {
+    [ERROR_CODE.INVALID_STEP_SIZE]:418,
+    [ERROR_CODE.SNAKE_OUT_OF_BOUNDS]: 418,
+    [ERROR_CODE.INVALID_180_TURN]: 418,
+    [ERROR_CODE.FRUIT_NOT_FOUND]: 404
+}

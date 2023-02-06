@@ -1,0 +1,67 @@
+{
+  "name": "cyberowl",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/src/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/src/index.js\"",
+    "test": "jest"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "body-parser": "1.20.1",
+    "debug": "2.6.9",
+    "dotenv": "16.0.3",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "express": "4.16.1",
+    "http-errors": "1.6.3",
+    "jade": "1.11.0",
+    "joi": "^17.7.0",
+    "lodash": "^4.17.21",
+    "morgan": "1.9.1",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "prettier": "^2.8.3",
+    "sequelize": "6.25.7"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "1.4.3",
+    "@types/express": "4.17.14",
+    "@types/jest": "29.2.3",
+    "@types/lodash": "^4.14.191",
+    "@types/morgan": "1.9.3",
+    "@types/node": "18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "concurrently": "7.5.0",
+    "eslint": "^8.33.0",
+    "jest": "29.3.1",
+    "nodemon": "2.0.20",
+    "ts-jest": "29.0.3",
+    "ts-node": "10.9.1",
+    "typescript": "^4.9.3"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      ".git",
+      "node_modules/**/node_modules"
+    ],
+    "verbose": true,
+    "execMap": {
+      "js": "node --harmony",
+      "py": "python",
+      "rb": "ruby",
+      "ts": "ts-node"
+    },
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "ext": "js,json"
+  }
+}
